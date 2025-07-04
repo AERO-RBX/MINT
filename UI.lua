@@ -1,7 +1,7 @@
 local lib = {tbCt = 0}
 local _New_ = Instance.new;
 
-local ui = _New_("ScreenGui", game.CoreGui);
+local ui = _New_("ScreenGui", game.CoreGui);  -- game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
 ui.Name = "ui";
 ui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
 
@@ -1053,7 +1053,7 @@ e.Callback = e.Callback or function()end
 
 			-- Toggle function (shared)
 			local function toggle()
-				local success = pcall(function()
+				 pcall(function()
 					e.Callback(debounce)
 				end)
 
@@ -1799,7 +1799,7 @@ e.Callback = e.Callback or function()end
 return t;
 end -- tab ends
 
-return lib;
+--return lib;
 
 
 
