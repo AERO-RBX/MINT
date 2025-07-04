@@ -953,7 +953,7 @@ e.Callback = e.Callback or function()end
 		
 		function f:Toggle(e)
 			e = e or {}
-
+			
 			local Toggle = _New_("Frame", Tab);
 			Toggle.BackgroundColor3 = Color3.fromRGB(22.000000588595867, 22.000000588595867, 22.000000588595867);
 			Toggle.BackgroundTransparency = 0.5;
@@ -1053,9 +1053,7 @@ e.Callback = e.Callback or function()end
 
 			-- Toggle function (shared)
 			local function toggle()
-				 pcall(function()
-					e.Callback(debounce)
-				end)
+				pcall(e.Callback,debounce)
 
 				if debounce then
 					debounce = false
