@@ -1,7 +1,7 @@
 local lib = {tbCt = 0}
 local _New_ = Instance.new;
 
-local ui = _New_("ScreenGui", game.CoreGui);
+local ui = _New_("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 ui.Name = "ui";
 ui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
 
@@ -1412,6 +1412,388 @@ e.Callback = e.Callback or function()end
 			
 		end
 		
+		function f:ColorPicker(e)
+			
+			e = e or {}
+			e.Callback = e.Callback or function()end
+			local ColorPicker = _New_("Frame", Tab);
+			ColorPicker.BackgroundColor3 = Color3.fromRGB(22.000000588595867, 22.000000588595867, 22.000000588595867);
+			ColorPicker.BackgroundTransparency = 0.5;
+			ColorPicker.BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036);
+			ColorPicker.BorderSizePixel = 0;
+			ColorPicker.Name = "ColorPicker";
+			ColorPicker.Position = UDim2.new(0.010526316240429878, 0, 0.5737704634666443, 0);
+			ColorPicker.Size = UDim2.new(1, 0, 0, 120);
+
+			local UIStroke = _New_("UIStroke", ColorPicker);
+			UIStroke.Color = Color3.fromRGB(50.00000461935997, 50.00000461935997, 50.00000461935997);
+
+			local UICorner = _New_("UICorner", ColorPicker);
+			UICorner.CornerRadius = UDim.new(0, 4);
+
+			local RGB = _New_("Frame", ColorPicker);
+			RGB.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+			RGB.BackgroundTransparency = 1;
+			RGB.BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036);
+			RGB.Name = "RGB";
+			RGB.Position = UDim2.new(0.02806481532752514, 0, 0.44999998807907104, 0);
+			RGB.Size = UDim2.new(0.5382830500602722, 0, 0.24166665971279144, 0);
+
+			local UIListLayout = _New_("UIListLayout", RGB);
+			UIListLayout.Padding = UDim.new(0, 5);
+			UIListLayout.FillDirection = Enum.FillDirection.Horizontal;
+			UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder;
+
+			local BInput = _New_("Frame", RGB);
+			BInput.AnchorPoint = Vector2.new(1, 0.5);
+			BInput.BackgroundColor3 = Color3.fromRGB(30.00000011175871, 30.00000011175871, 30.00000011175871);
+			BInput.BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036);
+			BInput.BorderSizePixel = 0;
+			BInput.LayoutOrder = 2;
+			BInput.Name = "BInput";
+			BInput.Position = UDim2.new(0.90625, 0, 0.4655172526836395, 0);
+			BInput.Size = UDim2.new(0.23275862634181976, 0, 0.931034505367279, 0);
+			BInput.ZIndex = 10;
+
+			local UIStroke_0 = _New_("UIStroke", BInput);
+			UIStroke_0.Color = Color3.fromRGB(60.00000022351742, 60.00000022351742, 60.00000022351742);
+
+			local UICorner_0 = _New_("UICorner", BInput);
+			UICorner_0.CornerRadius = UDim.new(0, 5);
+
+			local InputBox = _New_("TextBox", BInput);
+			InputBox.AnchorPoint = Vector2.new(0.5, 0.5);
+			InputBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+			InputBox.BackgroundTransparency = 1;
+			InputBox.BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036);
+			InputBox.BorderSizePixel = 0;
+			InputBox.ClearTextOnFocus = false;
+			InputBox.Name = "InputBox";
+			InputBox.Position = UDim2.new(0.5, 0, 0.5, 0);
+			InputBox.Size = UDim2.new(0.5962222218513489, 0, 0.5185185074806213, 0);
+			InputBox.ZIndex = 10;
+			InputBox.Font = Enum.Font.Unknown;
+			InputBox.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+			InputBox.PlaceholderText = "B";
+			InputBox.RichText = true;
+			InputBox.Text = "";
+			InputBox.TextColor3 = Color3.fromRGB(200.00000327825546, 200.00000327825546, 200.00000327825546);
+			InputBox.TextScaled = true;
+			InputBox.TextSize = 12;
+			InputBox.TextWrapped = true;
+			InputBox.TextXAlignment = Enum.TextXAlignment.Left;
+
+			local UITextSizeConstraint = _New_("UITextSizeConstraint", InputBox);
+			UITextSizeConstraint.MaxTextSize = 12;
+
+			local GInput = _New_("Frame", RGB);
+			GInput.AnchorPoint = Vector2.new(1, 0.5);
+			GInput.BackgroundColor3 = Color3.fromRGB(30.00000011175871, 30.00000011175871, 30.00000011175871);
+			GInput.BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036);
+			GInput.BorderSizePixel = 0;
+			GInput.LayoutOrder = 1;
+			GInput.Name = "GInput";
+			GInput.Position = UDim2.new(0.3296017348766327, 0, 0.4958333373069763, 0);
+			GInput.Size = UDim2.new(0.23275862634181976, 0, 0.931034505367279, 0);
+			GInput.ZIndex = 10;
+
+			local UICorner_1 = _New_("UICorner", GInput);
+			UICorner_1.CornerRadius = UDim.new(0, 5);
+
+			local UIStroke_1 = _New_("UIStroke", GInput);
+			UIStroke_1.Color = Color3.fromRGB(60.00000022351742, 60.00000022351742, 60.00000022351742);
+
+			local InputBox_0 = _New_("TextBox", GInput);
+			InputBox_0.AnchorPoint = Vector2.new(0.5, 0.5);
+			InputBox_0.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+			InputBox_0.BackgroundTransparency = 1;
+			InputBox_0.BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036);
+			InputBox_0.BorderSizePixel = 0;
+			InputBox_0.ClearTextOnFocus = false;
+			InputBox_0.Name = "InputBox";
+			InputBox_0.Position = UDim2.new(0.5, 0, 0.5, 0);
+			InputBox_0.Size = UDim2.new(0.5962222218513489, 0, 0.5185185074806213, 0);
+			InputBox_0.ZIndex = 10;
+			InputBox_0.Font = Enum.Font.Unknown;
+			InputBox_0.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+			InputBox_0.PlaceholderText = "G";
+			InputBox_0.RichText = true;
+			InputBox_0.Text = "";
+			InputBox_0.TextColor3 = Color3.fromRGB(200.00000327825546, 200.00000327825546, 200.00000327825546);
+			InputBox_0.TextScaled = true;
+			InputBox_0.TextSize = 12;
+			InputBox_0.TextWrapped = true;
+			InputBox_0.TextXAlignment = Enum.TextXAlignment.Left;
+
+			local UITextSizeConstraint_0 = _New_("UITextSizeConstraint", InputBox_0);
+			UITextSizeConstraint_0.MaxTextSize = 12;
+
+			local RInput = _New_("Frame", RGB);
+			RInput.AnchorPoint = Vector2.new(1, 0.5);
+			RInput.BackgroundColor3 = Color3.fromRGB(30.00000011175871, 30.00000011175871, 30.00000011175871);
+			RInput.BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036);
+			RInput.BorderSizePixel = 0;
+			RInput.Name = "RInput";
+			RInput.Position = UDim2.new(0.159964457154274, 0, 0.4958333373069763, 0);
+			RInput.Size = UDim2.new(0.23275862634181976, 0, 0.931034505367279, 0);
+			RInput.ZIndex = 10;
+
+			local UIStroke_2 = _New_("UIStroke", RInput);
+			UIStroke_2.Color = Color3.fromRGB(60.00000022351742, 60.00000022351742, 60.00000022351742);
+
+			local UICorner_2 = _New_("UICorner", RInput);
+			UICorner_2.CornerRadius = UDim.new(0, 5);
+
+			local InputBox_1 = _New_("TextBox", RInput);
+			InputBox_1.AnchorPoint = Vector2.new(0.5, 0.5);
+			InputBox_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+			InputBox_1.BackgroundTransparency = 1;
+			InputBox_1.BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036);
+			InputBox_1.BorderSizePixel = 0;
+			InputBox_1.ClearTextOnFocus = false;
+			InputBox_1.Name = "InputBox";
+			InputBox_1.Position = UDim2.new(0.5, 0, 0.5, 0);
+			InputBox_1.Size = UDim2.new(0.5959380269050598, 0, 0.5185185074806213, 0);
+			InputBox_1.ZIndex = 11;
+			InputBox_1.Font = Enum.Font.Unknown;
+			InputBox_1.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+			InputBox_1.PlaceholderText = "R";
+			InputBox_1.RichText = true;
+			InputBox_1.Text = "";
+			InputBox_1.TextColor3 = Color3.fromRGB(200.00000327825546, 200.00000327825546, 200.00000327825546);
+			InputBox_1.TextScaled = true;
+			InputBox_1.TextSize = 12;
+			InputBox_1.TextWrapped = true;
+			InputBox_1.TextXAlignment = Enum.TextXAlignment.Left;
+
+			local UITextSizeConstraint_1 = _New_("UITextSizeConstraint", InputBox_1);
+			UITextSizeConstraint_1.MaxTextSize = 12;
+
+			local Darkness = _New_("ImageButton", ColorPicker);
+			Darkness.AnchorPoint = Vector2.new(1, 1);
+			Darkness.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+			Darkness.BackgroundTransparency = 1;
+			Darkness.BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036);
+			Darkness.Name = "Darkness";
+			Darkness.Position = UDim2.new(0.9767979979515076, 0, 0.925000011920929, 0);
+			Darkness.Selectable = false;
+			Darkness.Size = UDim2.new(0.03030303120613098, 0, 0.8583333492279053, 0);
+			Darkness.ClipsDescendants = true;
+			Darkness.Image = "http://www.roblox.com/asset/?id=6523291212";
+
+			local UIStroke_3 = _New_("UIStroke", Darkness);
+			UIStroke_3.Color = Color3.fromRGB(50.00000461935997, 50.00000461935997, 50.00000461935997);
+
+			local UICorner_3 = _New_("UICorner", Darkness);
+			UICorner_3.CornerRadius = UDim.new(0, 6);
+
+			local SliderPoint = _New_("ImageButton", Darkness);
+			SliderPoint.AnchorPoint = Vector2.new(0.5, 0.5);
+			SliderPoint.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+			SliderPoint.BackgroundTransparency = 1;
+			SliderPoint.BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036);
+			SliderPoint.Name = "SliderPoint";
+			SliderPoint.Position = UDim2.new(0.5, 0, 0.5, 0);
+			SliderPoint.Selectable = false;
+			SliderPoint.Size = UDim2.new(0.7692307829856873, 0, 0.09708737581968307, 0);
+			SliderPoint.Image = "rbxassetid://3926309567";
+			SliderPoint.ImageColor3 = Color3.fromRGB(0, 0, 0);
+			SliderPoint.ImageRectOffset = Vector2.new(628, 420);
+			SliderPoint.ImageRectSize = Vector2.new(48, 48);
+
+			local TintAdder = _New_("TextLabel", Darkness);
+			TintAdder.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
+			TintAdder.BackgroundTransparency = 0.800000011920929;
+			TintAdder.BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036);
+			TintAdder.Name = "TintAdder";
+			TintAdder.Size = UDim2.new(1, 0, 1, 0);
+			TintAdder.Font = Enum.Font.Unknown;
+			TintAdder.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+			TintAdder.RichText = true;
+			TintAdder.Text = "";
+			TintAdder.TextColor3 = Color3.fromRGB(0, 0, 0);
+			TintAdder.TextScaled = true;
+			TintAdder.TextSize = 14;
+			TintAdder.TextWrapped = true;
+
+			local UICorner_4 = _New_("UICorner", TintAdder);
+			UICorner_4.CornerRadius = UDim.new(0, 6);
+
+			local UITextSizeConstraint_2 = _New_("UITextSizeConstraint", TintAdder);
+			UITextSizeConstraint_2.MaxTextSize = 14;
+
+			local Color = _New_("ImageButton", ColorPicker);
+			Color.Active = false;
+			Color.AnchorPoint = Vector2.new(1, 0.5);
+			Color.BackgroundColor3 = Color3.fromRGB(98.00000175833702, 255, 0);
+			Color.BackgroundTransparency = 1;
+			Color.BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036);
+			Color.BorderSizePixel = 0;
+			Color.Name = "Color";
+			Color.Position = UDim2.new(0.9234337210655212, 0, 0.4958333373069763, 0);
+			Color.Selectable = false;
+			Color.Size = UDim2.new(0.3473193347454071, 0, 0.8583333492279053, 0);
+			Color.Image = "http://www.roblox.com/asset/?id=6523286724";
+
+			local UIStroke_4 = _New_("UIStroke", Color);
+			UIStroke_4.Color = Color3.fromRGB(50.00000461935997, 50.00000461935997, 50.00000461935997);
+
+			local UICorner_5 = _New_("UICorner", Color);
+			UICorner_5.CornerRadius = UDim.new(0, 6);
+
+			local SliderPoint_0 = _New_("ImageButton", Color);
+			SliderPoint_0.AnchorPoint = Vector2.new(0.5, 0.5);
+			SliderPoint_0.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+			SliderPoint_0.BackgroundTransparency = 1;
+			SliderPoint_0.BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036);
+			SliderPoint_0.Name = "SliderPoint";
+			SliderPoint_0.Position = UDim2.new(0.5, 0, 0.5, 0);
+			SliderPoint_0.Selectable = false;
+			SliderPoint_0.Size = UDim2.new(0.06711409240961075, 0, 0.09708737581968307, 0);
+			SliderPoint_0.Image = "rbxassetid://3926309567";
+			SliderPoint_0.ImageColor3 = Color3.fromRGB(0, 0, 0);
+			SliderPoint_0.ImageRectOffset = Vector2.new(628, 420);
+			SliderPoint_0.ImageRectSize = Vector2.new(48, 48);
+
+			local TintAdder_0 = _New_("TextLabel", Color);
+			TintAdder_0.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
+			TintAdder_0.BackgroundTransparency = 0.800000011920929;
+			TintAdder_0.BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036);
+			TintAdder_0.Name = "TintAdder";
+			TintAdder_0.Size = UDim2.new(1, 0, 1, 0);
+			TintAdder_0.Font = Enum.Font.Unknown;
+			TintAdder_0.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+			TintAdder_0.RichText = true;
+			TintAdder_0.Text = "";
+			TintAdder_0.TextColor3 = Color3.fromRGB(0, 0, 0);
+			TintAdder_0.TextScaled = true;
+			TintAdder_0.TextSize = 14;
+			TintAdder_0.TextWrapped = true;
+
+			local UICorner_6 = _New_("UICorner", TintAdder_0);
+			UICorner_6.CornerRadius = UDim.new(0, 6);
+
+			local UITextSizeConstraint_3 = _New_("UITextSizeConstraint", TintAdder_0);
+			UITextSizeConstraint_3.MaxTextSize = 14;
+
+			local Title = _New_("TextLabel", ColorPicker);
+			Title.AnchorPoint = Vector2.new(0.5, 0.5);
+			Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+			Title.BackgroundTransparency = 1;
+			Title.BorderColor3 = Color3.fromRGB(27.000002190470695, 42.000001296401024, 53.000004440546036);
+			Title.BorderSizePixel = 0;
+			Title.Name = "Title";
+			Title.Position = UDim2.new(0.31322506070137024, 0, 0.18333333730697632, 0);
+			Title.Size = UDim2.new(0.5498839616775513, 0, 0.11666666716337204, 0);
+			Title.ZIndex = 3;
+			Title.Font = Enum.Font.Unknown;
+			Title.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+			Title.RichText = true;
+			Title.Text = e.Title or "Color Picker";
+			Title.TextColor3 = Color3.fromRGB(240.00000089406967, 240.00000089406967, 240.00000089406967);
+			Title.TextScaled = true;
+			Title.TextSize = 14;
+			Title.TextWrapped = true;
+			Title.TextXAlignment = Enum.TextXAlignment.Left;
+
+			local UITextSizeConstraint_4 = _New_("UITextSizeConstraint", Title);
+			UITextSizeConstraint_4.MaxTextSize = 14;
+			
+			
+			
+			local UserInputService = game:GetService("UserInputService")
+
+			-- Elements
+			local colorSlider = SliderPoint_0
+			local colorImage = Color
+			local brightnessSlider = SliderPoint
+			local brightnessImage = Darkness
+
+			local RBox = RInput:FindFirstChild("InputBox")
+			local GBox = GInput:FindFirstChild("InputBox")
+			local BBox = BInput:FindFirstChild("InputBox")
+
+			local draggingColor = false
+			local draggingBrightness = false
+			local brightness = 1 -- Value between 0 (dark) and 1 (bright)
+
+			-- Update the final selected color
+			local function UpdateColor()
+				local hue = colorSlider.Position.X.Scale
+				local sat = 1 - colorSlider.Position.Y.Scale
+				local val = brightness
+
+				local color = Color3.fromHSV(hue, sat, val)
+
+				if RBox then RBox.Text = tostring(math.floor(color.R * 255)) end
+				if GBox then GBox.Text = tostring(math.floor(color.G * 255)) end
+				if BBox then BBox.Text = tostring(math.floor(color.B * 255)) end
+
+				e.Callback(color)
+			end
+
+			-- Move slider and update position
+			local function SetSliderPosition(slider, image, input)
+				local absPos = image.AbsolutePosition
+				local absSize = image.AbsoluteSize
+				local mouse = input.Position
+
+				local x = math.clamp((mouse.X - absPos.X) / absSize.X, 0, 1)
+				local y = math.clamp((mouse.Y - absPos.Y) / absSize.Y, 0, 1)
+
+				slider.Position = UDim2.new(x, 0, y, 0)
+
+				return x, y
+			end
+
+			-- Color Gradient Interaction
+			colorImage.InputBegan:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseButton1 then
+					draggingColor = true
+					SetSliderPosition(colorSlider, colorImage, input)
+					UpdateColor()
+				end
+			end)
+
+			-- Brightness Bar Interaction
+			brightnessImage.InputBegan:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseButton1 then
+					draggingBrightness = true
+					local _, y = SetSliderPosition(brightnessSlider, brightnessImage, input)
+					brightness = 1 - y
+					UpdateColor()
+				end
+			end)
+
+			-- Mouse Up
+			UserInputService.InputEnded:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseButton1 then
+					draggingColor = false
+					draggingBrightness = false
+				end
+			end)
+
+			-- Mouse Movement for dragging
+			UserInputService.InputChanged:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseMovement then
+					if draggingColor then
+						SetSliderPosition(colorSlider, colorImage, input)
+						UpdateColor()
+					elseif draggingBrightness then
+						local _, y = SetSliderPosition(brightnessSlider, brightnessImage, input)
+						brightness = 1 - y
+						UpdateColor()
+					end
+				end
+			end)
+
+
+			
+			
+			
+			
+		end
+		
 	return f;
 	end
 return t;
@@ -1423,9 +1805,9 @@ return lib;
 
 
 
---[[
--- images
 
+-- images
+--[[
 		local icons = {
 			["aim"] = "rbxassetid://72783199740836",
 			["auto"] = "rbxassetid://127951680865394",
@@ -1518,5 +1900,13 @@ tab:DropDown({
 		print(e)
 	end
 })
+
+tab:ColorPicker({
+	Title = "CACA",
+	Callback = function(e)
+		print(e)
+	end,
+})
+
 
 ]]--
