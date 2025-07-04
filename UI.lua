@@ -1,7 +1,7 @@
 local lib = {tbCt = 0}
 local _New_ = Instance.new;
 
-local ui = _New_("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+local ui = _New_("ScreenGui", game.CoreGui);
 ui.Name = "ui";
 ui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
 
