@@ -1053,7 +1053,6 @@ e.Callback = e.Callback or function()end
 
 			-- Toggle function (shared)
 			local function toggle()
-				pcall(e.Callback,debounce)
 
 				if debounce then
 					debounce = false
@@ -1063,6 +1062,7 @@ e.Callback = e.Callback or function()end
 					TweenService:Create(Indicator, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {
 						Position = UDim2.new(0.07, 0, 0.5, 0)
 					}):Play()
+					pcall(e.Callback,false)
 				else
 					debounce = true
 					TweenService:Create(Switch, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {
@@ -1071,6 +1071,7 @@ e.Callback = e.Callback or function()end
 					TweenService:Create(Indicator, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {
 						Position = UDim2.new(0.537, 0, 0.5, 0)
 					}):Play()
+					pcall(e.Callback,true)
 				end
 			end
 
