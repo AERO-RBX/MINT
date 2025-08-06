@@ -272,6 +272,22 @@ function lib:Make(e)
 	Version.Size = UDim2.new(0, 49, 0, 19);
 	Version.ZIndex = 2;
 
+	local AtBottomTitle = _New_("TextLabel", Main);
+	AtBottomTitle.BackgroundColor3 = Color3.fromRGB(70.00000342726707, 70.00000342726707, 70.00000342726707);
+	AtBottomTitle.BackgroundTransparency = 1;
+	AtBottomTitle.BorderColor3 = Color3.fromRGB(0, 0, 0);
+	AtBottomTitle.BorderSizePixel = 0;
+	AtBottomTitle.Name = "AtBottomTitle";
+	AtBottomTitle.Position = UDim2.new(0.1300000101327896, 0, -0.009741499088704586, 310);
+	AtBottomTitle.Size = UDim2.new(0, 437, 0, 34);
+	AtBottomTitle.Font = Enum.Font.Unknown;
+	AtBottomTitle.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+	AtBottomTitle.RichText = true;
+	AtBottomTitle.Text = e.Game or "Game Name";
+	AtBottomTitle.TextColor3 = Color3.fromRGB(95.00000193715096, 95.00000193715096, 95.00000193715096);
+	AtBottomTitle.TextSize = 14;
+	AtBottomTitle.TextXAlignment = Enum.TextXAlignment.Left;
+	
 	local UICorner_4 = _New_("UICorner", Version);
 	UICorner_4.CornerRadius = UDim.new(0, 3);
 
@@ -292,21 +308,7 @@ function lib:Make(e)
 	ChannelType_0.TextColor3 = Color3.fromRGB(130.0000074505806, 130.0000074505806, 130.0000074505806);
 	ChannelType_0.TextSize = 10;
 
-	local AtBottomTitle = _New_("TextLabel", Main);
-	AtBottomTitle.BackgroundColor3 = Color3.fromRGB(70.00000342726707, 70.00000342726707, 70.00000342726707);
-	AtBottomTitle.BackgroundTransparency = 1;
-	AtBottomTitle.BorderColor3 = Color3.fromRGB(0, 0, 0);
-	AtBottomTitle.BorderSizePixel = 0;
-	AtBottomTitle.Name = "AtBottomTitle";
-	AtBottomTitle.Position = UDim2.new(0.1300000101327896, 0, -0.009741499088704586, 310);
-	AtBottomTitle.Size = UDim2.new(0, 437, 0, 34);
-	AtBottomTitle.Font = Enum.Font.Unknown;
-	AtBottomTitle.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal);
-	AtBottomTitle.RichText = true;
-	AtBottomTitle.Text = e.Game or "Game Name";
-	AtBottomTitle.TextColor3 = Color3.fromRGB(95.00000193715096, 95.00000193715096, 95.00000193715096);
-	AtBottomTitle.TextSize = 14;
-	AtBottomTitle.TextXAlignment = Enum.TextXAlignment.Left;
+
 
 	local Title_0 = _New_("TextLabel", Main);
 	Title_0.BackgroundColor3 = Color3.fromRGB(70.00000342726707, 70.00000342726707, 70.00000342726707);
