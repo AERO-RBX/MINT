@@ -1,7 +1,9 @@
+--Mint Preview library testing
+
 local lib = {tbCt = 0}
 local _New_ = Instance.new;
 
-local ui = _New_("ScreenGui", game.CoreGui);  -- game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+local ui = _New_("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));  -- game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
 ui.Name = "ui";
 ui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
 
@@ -272,22 +274,6 @@ function lib:Make(e)
 	Version.Size = UDim2.new(0, 49, 0, 19);
 	Version.ZIndex = 2;
 
-	local AtBottomTitle = _New_("TextLabel", Main);
-	AtBottomTitle.BackgroundColor3 = Color3.fromRGB(70.00000342726707, 70.00000342726707, 70.00000342726707);
-	AtBottomTitle.BackgroundTransparency = 1;
-	AtBottomTitle.BorderColor3 = Color3.fromRGB(0, 0, 0);
-	AtBottomTitle.BorderSizePixel = 0;
-	AtBottomTitle.Name = "AtBottomTitle";
-	AtBottomTitle.Position = UDim2.new(0.1300000101327896, 0, -0.009741499088704586, 310);
-	AtBottomTitle.Size = UDim2.new(0, 437, 0, 34);
-	AtBottomTitle.Font = Enum.Font.Unknown;
-	AtBottomTitle.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal);
-	AtBottomTitle.RichText = true;
-	AtBottomTitle.Text = e.Game or "Game Name";
-	AtBottomTitle.TextColor3 = Color3.fromRGB(95.00000193715096, 95.00000193715096, 95.00000193715096);
-	AtBottomTitle.TextSize = 14;
-	AtBottomTitle.TextXAlignment = Enum.TextXAlignment.Left;
-	
 	local UICorner_4 = _New_("UICorner", Version);
 	UICorner_4.CornerRadius = UDim.new(0, 3);
 
@@ -308,7 +294,21 @@ function lib:Make(e)
 	ChannelType_0.TextColor3 = Color3.fromRGB(130.0000074505806, 130.0000074505806, 130.0000074505806);
 	ChannelType_0.TextSize = 10;
 
-
+	local AtBottomTitle = _New_("TextLabel", Main);
+	AtBottomTitle.BackgroundColor3 = Color3.fromRGB(70.00000342726707, 70.00000342726707, 70.00000342726707);
+	AtBottomTitle.BackgroundTransparency = 1;
+	AtBottomTitle.BorderColor3 = Color3.fromRGB(0, 0, 0);
+	AtBottomTitle.BorderSizePixel = 0;
+	AtBottomTitle.Name = "AtBottomTitle";
+	AtBottomTitle.Position = UDim2.new(0.1300000101327896, 0, -0.009741499088704586, 310);
+	AtBottomTitle.Size = UDim2.new(0, 437, 0, 34);
+	AtBottomTitle.Font = Enum.Font.Unknown;
+	AtBottomTitle.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+	AtBottomTitle.RichText = true;
+	AtBottomTitle.Text = e.Game or "Game Name";
+	AtBottomTitle.TextColor3 = Color3.fromRGB(95.00000193715096, 95.00000193715096, 95.00000193715096);
+	AtBottomTitle.TextSize = 14;
+	AtBottomTitle.TextXAlignment = Enum.TextXAlignment.Left;
 
 	local Title_0 = _New_("TextLabel", Main);
 	Title_0.BackgroundColor3 = Color3.fromRGB(70.00000342726707, 70.00000342726707, 70.00000342726707);
@@ -955,7 +955,7 @@ e.Callback = e.Callback or function()end
 		
 		function f:Toggle(e)
 			e = e or {}
-			
+
 			local Toggle = _New_("Frame", Tab);
 			Toggle.BackgroundColor3 = Color3.fromRGB(22.000000588595867, 22.000000588595867, 22.000000588595867);
 			Toggle.BackgroundTransparency = 0.5;
@@ -1052,7 +1052,10 @@ e.Callback = e.Callback or function()end
 			local debounce = e.Value or false
 			local currentKeyCode = e.Key or Enum.KeyCode.F -- Set the actual Enum.KeyCode
 			local currentKeyName = typeof(currentKeyCode) == "EnumItem" and currentKeyCode.Name or tostring(currentKeyCode)
+			
+			
 
+			
 			-- Toggle function (shared)
 			local function toggle()
 
@@ -1801,113 +1804,3 @@ return t;
 end -- tab ends
 
 return lib;
-
-
-
-
-
-
--- images
---[[
-		local icons = {
-			["aim"] = "rbxassetid://72783199740836",
-			["auto"] = "rbxassetid://127951680865394",
-			["esp"] = "rbxassetid://125163371999984",
-			["player"] = "rbxassetid://115000590422103",
-			["colors"] = "rbxassetid://96594597742013",
-			["plrSet"] = "rbxassetid://11432831839",
-		}
-	OR e.Custom = "RBX ASSET"
-
-
--- Documents for Objects
-
-local config = {
-	Game = "Assassin!",
-	Ver = "1.0.6"
-}
-
-local main = lib:Make(config)
-
-local tab = main:Tab({
-	Icon = "aim"
-})
-
-tab:Label({
-	Text = "ASDGDSGSDGDSGD"
-})
-
-tab:SectionName({
-	Title = "New Stuff!"
-})
-tab:Divider()
-
-tab:Button({
-	Title = "Click Me!",
-	Callback = function()
-		print("Clicked!!")
-	end,
-})
-
-tab:Input({
-	Title = "Input Box",
-	Callback = function(e)
-		print(e)
-	end,
-})
-
-local e = tab:Toggle({
-	Title = "True",
-	Value = true,
-	Key = Enum.KeyCode.Z,
-	Callback = function(e)
-		print(e)
-	end,
-})
-
-e:Bind()
-
-tab:Toggle({
-	Title = "False",
-	Value = false,
-	Callback = function(e)
-		print(e)
-	end,
-})
-
-
-
-tab:Button({
-	Title = "Click Me!e",
-	Callback = function()
-		print("Clicked!!")
-	end,
-})
-
-tab:Slider({
-	Title = "Slider",
-	min = 0,
-	max = 100,
-	def = 12,
-	Callback = function(e)
-		print(e)
-	end,
-})
-
-tab:DropDown({
-	Title = "Drop",
-	List = {"1","2","3"},
-	Callback = function(e)
-		print(e)
-	end
-})
-
-tab:ColorPicker({
-	Title = "CACA",
-	Callback = function(e)
-		print(e)
-	end,
-})
-
-
-]]--
